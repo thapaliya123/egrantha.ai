@@ -7,7 +7,18 @@ Unit testing example: text analysis
         - the number of characters in the file
 - Note: TDD (Test Driven Development) is a form of software development where tests are written 
 first i.e. before you write the actual functionality to be tested.
+
+Keypoints:
+- The unittest module is a framework for developing reliable automated tests
+- You define test cases by subclassing from unittest.TestCase
+- The unittest.main() function is useful for running all of the tests in a module
+- The setUp() and tearDown() fixtures are used to run code before and after each test method.
+- Test methods are defined by creating method names that start with test_ on test case objects
+- The various TestCase.assert... methods can be used to make a test method fail when the 
+  right conditions aren't met
+- Use TestCase.assertRaises() in a with statement to check that the right exceptions are thrown
 """
+
 import os
 import unittest
 from typing import Tuple
@@ -80,13 +91,3 @@ class TextAnalysisTests(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 
-"""
-- The unittest module is a framework for developing reliable automated tests
-- You define test cases by subclassing from unittest.TestCase
-- The unittest.main() function is useful for running all of the tests in a module
-- The setUp() and tearDown() fixtures are used to run code before and after each test method.
-- Test methods are defined by creating method names that start with test_ on test case objects
-- The various TestCase.assert... methods can be used to make a test method fail when the 
-  right conditions aren't met
-- Use TestCase.assertRaises() in a with statement to check that the right exceptions are thrown
-"""
